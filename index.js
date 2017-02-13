@@ -21,7 +21,7 @@ var totalBatteries = batteryBatches.reduce(function(initialBatteries, currentBat
   return initialBatteries + currentBatch;
 }, 0);
 
-var wordCountMap = function(array) {
+function reducingToCount(array) {
 //set variables to track each word count (0, 1, 2, etc)
   var zeroCount = 0, oneCount = 0, twoCount = 0, threeCount = 0, fourCount = 0,
   fiveCount = 0, sixCount = 0, sevenCount = 0, eightCount = 0, nineCount = 0,
@@ -122,3 +122,5 @@ var wordCountMap = function(array) {
   return countObject;
 
 }
+
+var wordCountMap = reducingToCount(monologueLines);
